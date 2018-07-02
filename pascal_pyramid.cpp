@@ -29,7 +29,7 @@ int main()
 				multiplier = (rowNumber - colNumber - 1) / (colNumber + 1);
 				otherValuesInRow = firstValueInRow * multiplier;
 				firstValueInRow = otherValuesInRow;
-				cout << otherValuesInRow << " ";
+				cout << multiplier << " ";
 			}
 			else
 			{

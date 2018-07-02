@@ -12,8 +12,12 @@ int main()
 	double overallValue;
 	int powerNumerator;
 	int powerDenominator;
+	int userInput;
 	
-	for (numRows=0; numRows < 30; numRows++) //# of Katie's triangle rows displayed
+	cout << "How many lines would you like to produce?" << endl;
+	cin >> userInput;
+	
+	for (numRows=0; numRows < userInput + 2; numRows++) //# of Katie's triangle rows displayed
 	{
 		for (m = 0; m <= numRows; m++)
 		{
@@ -39,7 +43,6 @@ int main()
 				cout << "( " << powerNumerator << " / "<< powerDenominator << " ) ";
 			}
 		}
-		cout << endl;
 		cout << endl;
 		cout << endl;
 		m = 0;

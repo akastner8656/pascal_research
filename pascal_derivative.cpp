@@ -14,6 +14,7 @@ int main()
 	double totalFirstValue = 0;
 	double totalSecondValue = 0;
 	
+
 	for (numRows; numRows < 2; numRows++)
 	{
 		for (m = 0; m <= numRows; m++)
