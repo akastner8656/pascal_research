@@ -8,23 +8,35 @@ int main()
 	double rowNumber;
 	int userInput;
 	double pascalValue = 1;
+	double lastRowValue;
+	double pyramidValue;
+	double lastRow;
 	
 	cout << "How many lines would you like to produce?" << endl;
 	cin >> userInput;
 	
-	for (rowNumber = 0; rowNumber < userInput + 1; rowNumber++)
+	lastRow = (userInput - 1);
+	
+	for (rowNumber = 0; rowNumber < userInput; rowNumber++)
 	{
 		for (colNumber = 0; colNumber <= rowNumber; colNumber++)
 		{			
+			katieTriangleMultiplier = (rowNumber - colNumber + 1) / (colNumber);						
 			if (colNumber == 0)
 			{
+				pyramidValue = pascalValue * lastRowValue;
 				cout << pascalValue << " ";
 			}
 			else
 			{
-				katieTriangleMultiplier = (rowNumber - colNumber + 1) / (colNumber);
 				pascalValue = pascalValue * katieTriangleMultiplier;
+				pyramidValue = pascalValue * lastRowValue;
 				cout << pascalValue << " ";
+			}
+			if (rowNumber + 1 == userInput)
+			{
+				lastRowValue = (lastRow - colNumber + 1) / (colNumber);
+				cout << lastRowValue << " ";
 			}
 		}
 		pascalValue = 1;
@@ -32,3 +44,5 @@ int main()
 		cout << endl << endl;
 	}
 }
+
+//produce specific rows of Pascal's pyramid
